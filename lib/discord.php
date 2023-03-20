@@ -7,15 +7,13 @@ use \DiscordWebhooks\Embed;
  * Trigger the confession webhook.
  */
 function webhook($confession) {
-	global $webhook, $title;
+	global $webhook;
 
 	$webhook = new Client($webhook);
 	$mbd = new Embed();
 
 	$mbd->description($confession)
-		->timestamp(date(DATE_ATOM))
-		->color(1294139)
-		->footer($title);
+		->color(1294139);
 
 	$webhook->embed($mbd)->send();
 }

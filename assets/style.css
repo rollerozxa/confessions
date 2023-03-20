@@ -66,4 +66,8 @@ textarea, input[type=submit] {
 	display: block;
 }
 
-
+.warning {
+	background-color: #740000;
+	padding: 20px;
+	margin-bottom: 2em;
+}

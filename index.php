@@ -25,6 +25,10 @@ if ($confession) {
 	<div class="container">
 		<p>Write your super secret confessions here. It will be made available in the <code><?=$channel ?></code> channel inside of the Discord server.</p>
 
+		<?php if ($recommendTor && !isTor($ipaddr)) { ?>
+			<div class="warning"><strong>You are not using Tor.</strong> Your confession could potentially be deanonymised using access logs. Please consider using Tor for the most anonymous experience.</div>
+		<?php } ?>
+
 		<form method="POST">
 			<p><textarea name="confession" placeholder="I like putting milk before the cereal..." cols="80" rows="10"></textarea></p>
 
